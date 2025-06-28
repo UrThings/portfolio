@@ -4,7 +4,7 @@ const projects = [
   {
     title: "GERLY Renting Platform",
     description: "A platform for renting properties.",
-    picture: "/images/gerly/logo.png",
+    picture: "/images/gerly/Logo.png",
     images: [
       "/images/gerly/1.png",
       "/images/gerly/2.png",
@@ -74,6 +74,9 @@ export default function ProjectGallery() {
             </div>
           </div>
         ))}
+        <div className="h-[50px] select-none">
+            .
+        </div>
       </div>
 
       {/* ✅ Modal */}

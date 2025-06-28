@@ -5,9 +5,11 @@ import About from "./pages/about";
 import Skills from "./pages/skills";
 import Projects from "./pages/projects";
 import Contact from "./pages/contact";
+import { useState } from "react";
 
 export default function App() {
   const location = useLocation(); // ⚠️ ЗӨВХӨН function component дотор л ашиглаж болно
+    const [isLoading, setIsLoading] = useState(true);
 
   return (
 
@@ -23,10 +25,16 @@ export default function App() {
           autoPlay
           muted
           loop
+           onCanPlay={() => setIsLoading(false)}
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
           <source src="/images/2.mp4" type="video/mp4" />
         </video>
+        {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black">
+          <div className="h-10 w-10 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      )}
          <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Main />} />
