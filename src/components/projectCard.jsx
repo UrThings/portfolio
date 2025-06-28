@@ -74,7 +74,7 @@ export default function ProjectGallery() {
             </div>
           </div>
         ))}
-        <div className="h-[50px] select-none">
+        <div className="h-[60px] sm:h-[30px] select-none">
             .
         </div>
       </div>
