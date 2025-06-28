@@ -1,0 +1,10 @@
+{
+  "name": "Your App",
+  "icons": [
+    {
+      "src": "path/to/logo192.png", 
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
